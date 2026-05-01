@@ -1,0 +1,460 @@
+/* src/App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #000;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.nav-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text {
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.logo-subtext {
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #ef4444;
+  letter-spacing: 1px;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ef4444;
+}
+
+/* Ticket Button */
+.ticket-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ticket-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* ================== MOBILE MENU ================== */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  padding: 1.5rem;
+  gap: 1.2rem;
+  border-top: 1px solid #333;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 8px 0;
+}
+
+/* ================== HERO SECTION ================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.92)), 
+                    url('https://t4.ftcdn.net/jpg/10/00/55/85/360_F_1000558508_jn10hDN7ocYpHD9puMmzdnzXSRraOxWu.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.95) 35%, rgba(0,0,0,0.65) 70%);
+  z-index: 2;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  z-index: 4;
+  padding: 60px 0;
+}
+
+.hero-subtitle {
+  color: #ef4444;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 7.5vw, 5.8rem);
+  line-height: 1.05;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+}
+
+.hero-title span {
+  color: #ef4444;
+}
+
+.hero-desc {
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  color: #e5e5e5;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 16px 34px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 180px;
+}
+
+.btn-primary {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #dc2626;
+  transform: translateY(-4px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: white;
+}
+
+/* Right Side Fighter Image */
+.hero-image-container {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-image {
+  width: 90%;
+  max-width: 620px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  margin-left: -130px;
+}
+
+/* ================== FEATURES ================== */
+/* ================== FEATURES SECTION - ONE CLEAN LINE ================== */
+.features {
+  padding: 70px 0;
+  background-color: #0a0a0a;
+  border-top: 1px solid #222;
+}
+
+.features-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.feature-card {
+  flex: 1;
+  text-align: center;
+  min-width: 180px;
+}
+
+.feature-icon {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  color: #ef4444;
+  display: block;
+}
+
+.feature-title {
+  color: #ef4444;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.feature-desc {
+  color: #bbbbbb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .features-grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    min-width: 200px;
+  }
+}
+/* ================== RESPONSIVE MEDIA QUERIES ================== */
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-top-row {
+    display: none;
+  }
+  .ticket-btn {
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 1024px) {
+  .nav-links,
+  .ticket-btn {
+    display: none;
+  }
+
+ .hamburger {
+        display: block;
+        margin-left: 224px;
+        margin-top: -106px;
+    }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  /* Second line - GET TICKETS Button */
+  .ticket-btn {
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 1rem;
+  }
+  
+  .hero-container {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+  
+  .btn {
+    min-width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+/* Other existing responsive styles */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-desc {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-title {
+    font-size: 5.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-image {
+    max-width: 650px;
+  }
+}
+
+
+/* loader */
+/* ================== LOADER ================== */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #000;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #333;
+  border-top: 5px solid #ef4444;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  color: #ef4444;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
